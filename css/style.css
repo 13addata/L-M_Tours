@@ -218,7 +218,7 @@ navigation section
     color: #fff;
     }
 .custom-navbar .nav li a {
-    color: #ffffff;
+    color: #fff;
     font-size: 14px;
     font-weight: 500;
     }
@@ -263,7 +263,7 @@ home section
   background: url('../src/img/bg.jpg');
   background-size: cover;
   background-position: center;
-  color: #ffffff;
+  color: #222;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -310,11 +310,17 @@ home section
   	color: #ffffff;
 }
 
+#home .container {
+  background: #ffffff88;
+  padding-bottom: 20px;
+}
+
 /* ==========================================================================
 work section
 ========================================================================== */
 #work {
     text-align: center;
+    background: #f6f6f6;
 }
 #work .col-md-4 {
   padding: 28px;
@@ -327,6 +333,10 @@ work section
 }
 #work h3 {
   font-size: 18px;
+}
+
+#event-title {
+  color: #e74c3c;
 }
 
 
@@ -597,7 +607,7 @@ pricing section
 contact section
 ========================================================================== */
 #contact {
-  background: #3B3B3B url('../images/contact-bg.jpg') no-repeat center center;
+  background: #3B3B3B url('../src/img/contact-bg.jpg') no-repeat center center;
   background-size: cover;
   color: #ffffff;
 }
