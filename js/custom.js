@@ -6,3 +6,14 @@ $(window).scroll(function() {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
     }
 });
+
+var vm = new Vue({
+
+    el: "#body",
+    data : {
+        teamZoom: 0,
+    },
+    methods : {
+    }
+
+})

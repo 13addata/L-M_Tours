@@ -6,11 +6,15 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
+<div id="body">
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/jquery.backstretch.min.js"></script>
 <!-- navigation section -->
-<section class="navbar navbar-fixed-top custom-navbar" role="navigation">
+<section class="navbar navbar-fixed-top custom-navbar" role="navigation" v-if="teamZoom===0">
 	<div class="container">
 		<div class="navbar-header">
 			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -41,7 +45,7 @@
 			<div class="col-md-12 col-sm-12">
 				<h3>VACATIONS / BUS TOURS / CRUISES / AIRLINE TICKETS</h3>
 				<h1>L&M Tours</h1>
-				<hr>
+				<h3>Quality Escorted Motorcoach Tours Since 1999</h3>
 				<a href="#about" class="smoothScroll btn btn-danger">What we do</a>
 				<a href="#contact" class="smoothScroll btn btn-default">Talk to us</a>
 			</div>
@@ -61,34 +65,33 @@
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-12">
-				<img src="images/about-img.jpg" class="img-responsive" alt="about img">
+				<img src="src/img/about.jpg" class="img-responsive" alt="about img">
 			</div>
 			<div class="col-md-6 col-sm-12">
-				<h3 class="bold">Welcome to L & M Tours</h3>
+				<h3 class="bold about-title">Welcome to L & M Tours</h3>
 				<h1 class="heading bold">We are here to service your holiday plans and fulfill your vacation dreams. </h1>
 				<!-- Nav tabs -->
 				<ul class="nav nav-tabs" role="tablist">
-					<li class="active"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">ABOUT</a></li>
-					<li><a href="#mobile" aria-controls="mobile" role="tab" data-toggle="tab">CONCEPT</a></li>
-					<!-- <li><a href="#social" aria-controls="social" role="tab" data-toggle="tab">SOCIAL</a></li> -->
+					<li class="active"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">ABOUT US</a></li>
+					<li><a href="#mobile" aria-controls="mobile" role="tab" data-toggle="tab">OUR BELIEVES</a></li>
+					<li><a href="#social" aria-controls="social" role="tab" data-toggle="tab">SOCIAL</a></li>
 				</ul>
 				<!-- tab panes -->
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane active" id="design">
-						<p>L & M Tours is a tour operator and full service travel agency serving the New York metropolitan area. We have been organizing tours for more than 10 years and pride ourselves on courteous service and satisfied customers. </p>
 						<br>
-						<p>We at L & M Tours are here to arrange all of your travel needs. We specialize in arranging customized tours for students, religious organizations, adults and incentive groups. We can help plan an overnight romantic getaway or a large family reunion. Whether your choice is to travel alone or with a large group, L & M prides itself on individual attention and quality packages.</p>
+						<p>L & M Tours is a tour operator and full service travel agency serving the New York metropolitan area. We have been organizing tours for more than 10 years and pride ourselves on courteous service and satisfied customers. </p>
+						<br><br><br><br><br>
 					</div>
 					<div role="tabpanel" class="tab-pane" id="mobile">
 						<p>L & M Tours can design a vacation that is within your budget without compromising quality. We have no additional hidden costs, no application fees and no complicated pricing scales. </p>
-						<br>
 						<p>In these stressful times we appreciate the fact that your free time is precious. Allow us to take this opportunity to help you create memories that will last a lifetime.</p>
 						<br><br><br><br>
 					</div>
-					<!-- <div role="tabpanel" class="tab-pane" id="social">
-						<p>Pellentesque elementum, lacus sit amet <a href="#">hendrerit</a> posuere, quam quam tristique nisi, nec ornare ligula magna id nisl. Donec blandit enim ac semper facilisis. Curabitur eu laoreet mauris, eget fermentum velit.</p>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
-					</div> -->
+					<div role="tabpanel" class="tab-pane" id="social">
+						<p>We at L & M Tours are here to arrange all of your travel needs. We specialize in arranging customized tours for students, religious organizations, adults and incentive groups. We can help plan an overnight romantic getaway or a large family reunion. Whether your choice is to travel alone or with a large group, L & M prides itself on individual attention and quality packages.</p>
+						<br><br><br><br>
+					</div>
 
 				</div>
 			</div>
@@ -107,8 +110,8 @@
 					<hr>
 				</div>
 			</div>
-			<div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.9s">
-				<div class="team-wrapper">
+			<div class="col-md-3 col-sm-6 fadeIn" >
+				<div class="team-wrapper" @click="teamZoom=1" >
 					<img src="src/img/Bus86A.jpg" class="img-responsive" alt="team img">
 						<div class="team-des">
 							<h4>Prevost 56 Seats bus</h4>
@@ -117,8 +120,11 @@
 						</div>
 				</div>
 			</div>
-			<div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="1.3s">
-				<div class="team-wrapper">
+			<div class="teamimg" v-if="teamZoom===1">
+				<img src="src/img/Bus86B.jpg" alt="">
+			</div>
+			<div class="col-md-3 col-sm-6 fadeIn" >
+				<div class="team-wrapper" @click="teamZoom=2" >
 					<img src="src/img/Bus88A.jpg" class="img-responsive" alt="team img">
 						<div class="team-des">
 							<h4>Prevost 56 Seats bus </h4>
@@ -127,8 +133,11 @@
 						</div>
 				</div>
 			</div>
-			<div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="1.6s">
-				<div class="team-wrapper">
+			<div class="teamimg" v-if="teamZoom===2">
+				<img src="src/img/Bus88B.jpg" alt="">
+			</div>
+			<div class="col-md-3 col-sm-6 fadeIn" >
+				<div class="team-wrapper" @click="teamZoom=3" >
 					<img src="src/img/Side_view.jpg" class="img-responsive" alt="team img">
 						<div class="team-des">
 							<h4>24 Seats Mini Bus </h4>
@@ -137,8 +146,11 @@
 						</div>
 				</div>
 			</div>
-			<div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="1.6s">
-				<div class="team-wrapper">
+			<div class="teamimg" v-if="teamZoom===3">
+				<img src="src/img/interior.jpg" alt="">
+			</div>
+			<div class="col-md-3 col-sm-6 fadeIn" >
+				<div class="team-wrapper" @click="teamZoom=4" >
 					<img src="src/img/Capitol_hill.jpg" class="img-responsive" alt="team img">
 						<div class="team-des">
 							<h4>24 Seats Mini Bus </h4>
@@ -146,6 +158,9 @@
 							<hr>
 						</div>
 				</div>
+			</div>
+			<div class="teamimg" v-if="teamZoom===4">
+				<img src="src/img/interior seats.jpg" alt="">
 			</div>
 		</div>
 	</div>
@@ -157,37 +172,37 @@
 		<div class="row">
 			<div class="col-md-12 col-sm-12">
 				<div class="section-title">
-					<strong>03</strong>
+					<strong>04</strong>
 					<h1 class="heading bold">GALLERY</h1>
 					<hr>
 				</div>
 				<!-- ISO section -->
-				<div class="">
-               		<div class="">
-               			<div class="">
+				<div class="iso-section">
+               		<div class="iso-box-section">
+               			<div class="iso-box-wrapper col4-iso-box">
 
-               				 <div class="">
-               				 	<a href="src/img/gallery-img1.jpg"><img src="src/img/gallery-img1.jpg" alt="gallery img"></a>
+               				 <div class="iso-box col-lg-4 col-md-4 col-sm-6">
+               				 	<a href="src/img/gallery-img1.jpg" data-lightbox-gallery="portfolio-gallery"><img src="src/img/gallery-img1.jpg" alt="portfolio img"></a>
                				 </div>
 
-               				 <div class="">
-               				 	<a href="src/img/gallery-img2.jpg"><img src="src/img/gallery-img2.jpg" alt="gallery img"></a>
+               				 <div class="iso-box col-lg-4 col-md-4 col-sm-6">
+               				 	<a href="src/img/gallery-img2.jpg" data-lightbox-gallery="portfolio-gallery"><img src="src/img/gallery-img2.jpg" alt="portfolio img"></a>
                				 </div>
 
-               				 <div class="">
-               				 	<a href="src/img/gallery-img3.jpg"><img src="src/img/gallery-img3.jpg" alt="gallery img"></a>
+               				 <div class="iso-box col-lg-4 col-md-4 col-sm-6">
+               				 	<a href="src/img/gallery-img3.jpg" data-lightbox-gallery="portfolio-gallery"><img src="src/img/gallery-img3.jpg" alt="portfolio img"></a>
                				 </div>
 
-               				 <div class="">
-               				 	<a href="src/img/gallery-img4.jpg"><img src="src/img/gallery-img4.jpg" alt="gallery img"></a>
+               				 <div class="iso-box col-lg-4 col-md-4 col-sm-6">
+               				 	<a href="src/img/gallery-img4.jpg" data-lightbox-gallery="portfolio-gallery"><img src="src/img/gallery-img4.jpg" alt="portfolio img"></a>
                				 </div>
 
-               				 <div class="">
-               				 	<a href="src/img/gallery-img5.jpg"><img src="src/img/gallery-img5.jpg" alt="gallery img"></a>
+               				 <div class="iso-box col-lg-4 col-md-4 col-sm-6">
+               				 	<a href="src/img/gallery-img5.jpg" data-lightbox-gallery="portfolio-gallery"><img src="src/img/gallery-img5.jpg" alt="portfolio img"></a>
                				 </div>
 
-               				 <div class="">
-               				 	<a href="src/img/gallery-img6.jpg"><img src="src/img/gallery-img6.jpg" alt="gallery img"></a>
+               				 <div class="iso-box col-lg-4 col-md-4 col-sm-6">
+               				 	<a href="src/img/gallery-img6.jpg" data-lightbox-gallery="portfolio-gallery"><img src="src/img/gallery-img6.jpg" alt="portfolio img"></a>
                				 </div>
 
                			</div>
@@ -197,7 +212,7 @@
 			</div>
 		</div>
 	</div>
-</div>		
+</div>	
 
 <!-- pricing section -->
 <section id="pricing">
@@ -211,7 +226,7 @@
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-6">
-				<div class="plan plan-one wow bounceIn" data-wow-delay="0.3s">
+				<div class="plan plan-one bounceIn" >
 					<div class="plan_title">
 						<i class="icon-mobile medium-icon"></i>
 						<h3>BASIC</h3>
@@ -227,7 +242,7 @@
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-6">
-				<div class="plan plan-two wow bounceIn" data-wow-delay="0.3s">
+				<div class="plan plan-two bounceIn" >
 					<div class="plan_title">
 						<i class="icon-desktop medium-icon"></i>
 						<h3>BUSINESS</h3>
@@ -243,7 +258,7 @@
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-6">
-				<div class="plan plan-three wow bounceIn" data-wow-delay="0.3s">
+				<div class="plan plan-three bounceIn" >
 					<div class="plan_title">
 						<i class="icon-cloud medium-icon"></i>
 						<h3>PROFESSIONAL</h3>
@@ -277,7 +292,7 @@
 			<h2 id="event-title">Incredible Acrobats of China Hunan Troupe - "Dream Journey"</h2>
 			<p>Sunday, November 4, 2018  3 PM</p>
 			<p>Klein Memorial Auditorium  Bridgeport, CT</p>
-			<a href="">Individual Price </a><span>&nbsp &nbsp	</span><a href=""> 	Group Price</a>
+			<a href="src/downloads/Incredible Acrobats of China Individual.pdf">Individual Price </a><span>&nbsp &nbsp	</span><a href="src/downloads/Incredible Acrobats of China Group.pdf"> 	Group Price</a>
 			<h3></h3>
 		</div>
 	</div>
@@ -295,19 +310,22 @@
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-12 contact-info">
-				<h2 class="heading bold">CONTACT INFO</h2>
-				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteu sunt in culpa qui officia deserunt mollit anim id.</p>
-				<div class="col-md-6 col-sm-4">
-					<h3><i class="icon-envelope medium-icon wow bounceIn" data-wow-delay="0.6s"></i> EMAIL</h3>
-					<p>hello@company.com</p>
+				<br><br><br>
+				<div class="col-md-12 col-sm-4">
+					<h3><i class="fa fa-home" ></i> ADDRESS</h3>
+					<p>6812 3rd Avenue, Brooklyn, NY 11220</p>
 				</div>
 				<div class="col-md-6 col-sm-4">
-					<h3><i class="icon-phone medium-icon wow bounceIn" data-wow-delay="0.6s"></i> PHONES</h3>
-					<p>010-020-0340 | 090-080-0760</p>
+					<h3><i class="fa fa-envelope" ></i> EMAIL</h3>
+					<p>info@LMTOURS.net</p>
+				</div>
+				<div class="col-md-6 col-sm-4">
+					<h3><i class="fa fa-phone" ></i> PHONE</h3>
+					<p>718-238-2284</p>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-12">
-				<form action="#" method="get" class="wow fadeInUp" data-wow-delay="0.6s">
+				<form action="#" method="get" class="fadeInUp" >
 					<div class="col-md-6 col-sm-6">
 						<input type="text" class="form-control" placeholder="Name" name="name">
 					</div>
@@ -329,15 +347,13 @@
 <!-- footer section -->
 <footer>
 	<div class="container">
-		<p>Copyright © 2018. L&M Tours<br>All rights reserved.</p>
+		<p>Copyright © 2018. L&M Tours Inc.<br>All rights Reserved.</p>
 	</div>
+	<div class="imgcover" @click="teamZoom=0" v-if="teamZoom!=0"></div>
 </footer>
 
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/smoothscroll.js"></script>
-<script src="js/jquery.backstretch.min.js"></script>
+<script src="js/vue.js"></script>
 <script src="js/custom.js"></script>
-
+</div>
 </body>
 </html>
