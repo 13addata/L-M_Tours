@@ -79,10 +79,12 @@ navigation section
     background: #4B4B4B;
     margin-bottom: 0;
 }
-.custom-navbar .navbar-brand  {
-  color: #e74c3c;
+.custom-navbar .navbar-brand  img{
+  /*color: #e74c3c;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 24px;*/
+  width: 200px;
+
 }
 .custom-navbar .navbar-brand .navbar-toggle {
     background: #e74c3c;
