@@ -271,6 +271,11 @@ about section
 .about-title {
   color: #e74c3c;
 }
+.about-info { text-align: center; }
+.about-info p{
+  text-align: justify;
+}
+
 /* ==========================================================================
 team section
 ========================================================================== */
