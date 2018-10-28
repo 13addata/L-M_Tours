@@ -79,12 +79,12 @@ navigation section
     background: #4B4B4B;
     margin-bottom: 0;
 }
-.custom-navbar .navbar-brand  img{
-  /*color: #e74c3c;
+.custom-navbar .navbar-brand{
+  font-family: 'Britannic';
+  color: #e74c3c;
   font-weight: 600;
-  font-size: 24px;*/
-  width: 200px;
-
+  font-size: 36px;
+  width: 300px;
 }
 .custom-navbar .navbar-brand .navbar-toggle {
     background: #e74c3c;
@@ -93,7 +93,7 @@ navigation section
     color: #fff;
     }
 .custom-navbar .nav li a {
-    display: none;
+    color: #ffffff;
     font-size: 14px;
     font-weight: 500;
     }
@@ -154,6 +154,13 @@ home section
 }
 #home h1 {
   font-size: 40px;
+}
+
+#home .lmt{
+  font-family: 'Britannic';
+  color: #e74c3c;
+  font-weight: 600;
+  font-size: 50px;
 }
 #home h3 {
   font-size: 14px;
@@ -267,6 +274,10 @@ about section
 	color: #FF0;
 	text-decoration: none;
 }
+.member {
+  width: 160px;
+  margin-right: 10px;
+}
 
 .about-title {
   color: #e74c3c;
@@ -274,6 +285,19 @@ about section
 .about-info { text-align: center; }
 .about-info p{
   text-align: justify;
+}
+.about-img {
+  margin: 50px 0;
+}
+
+/* ==========================================================================
+nav dropdown section
+========================================================================== */
+.dropdown {
+  margin-left: 70%;
+  width: 300px;
+  margin-top: 60px;
+  background: #4b4b4b;
 }
 
 /* ==========================================================================
@@ -429,7 +453,7 @@ pricing section
   text-align: center;
 }
 #pricing h2 {
-  font-size: 52px;
+  font-size: 32px;
 }
 #pricing h3 {
   font-size: 16px;
@@ -448,6 +472,11 @@ pricing section
   letter-spacing: 2px;
   padding: 30px;
   margin-bottom: 20px;
+}
+#pricing .plan .plan_title img{
+  display: block;
+  position: relative;
+  width: 100%;
 }
 #pricing .medium-icon {
   box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.20);
@@ -486,6 +515,16 @@ pricing section
 }
 #pricing .plan-three .btn {
   background-color: #009988;
+}
+
+#pricing .plan-one h2 {
+  color: #e74c3c;
+}
+#pricing .plan-two h2 {
+  color: #ffa400;
+}
+#pricing .plan-three h2 {
+  color: #009988;
 }
 #pricing .plan .btn:hover {
   background-color: #3B3B3B;
@@ -541,8 +580,7 @@ contact section
 #contact input[type="submit"]:hover {
   color: #000000;
 }
-
-
+#contact .contact-btn { margin-left: 30px; color: #e74c3c; font-size: 16px; }
 /* ==========================================================================
 footer section
 ========================================================================== */
