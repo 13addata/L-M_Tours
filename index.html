@@ -387,6 +387,45 @@
 
 </div>
 <script src="js/custom.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript">
+
+	window.onload = function() {
+		var swiper = new Swiper('.swiper-container',{
+			autoplay: false,
+			speed: 1000,
+			autoplayDisableOnInteraction: false,
+			loop: true,
+			centeredSlides: true,
+			slidesPerView: 2,
+			pagination: '.swiper-pagination',
+			paginationClickable: true,
+			prevButton: '.swiper-button-prev',
+			nextButton: '.swiper-button-next',
+			onInit: function(swiper) {
+				swiper.slides[2].className = "swiper-slide swiper-slide-active";
+			},
+			breakpoints: {
+				668: {
+					slidesPerView: 1,
+				}
+			}
+		});
+	}
+</script>
+<script src ="https://form.jotform.com/static/feedback2.js" type="text/javascript"></script><script type="text/javascript">
+    var JFL_83073839336161 = new JotformFeedback({
+      formId: '83073839336161',
+      base: 'https://form.jotform.com/',
+      windowTitle: 'Free Brochure Request Form',
+      background: '#FFA500',
+      fontColor: '#FFFFFF',
+      type: 'false',
+      height: 500,
+      width: 700,
+      openOnLoad: false
+    });
+</script>
 </body>
 </html>
 
