@@ -20,7 +20,6 @@ var vm = new Vue({
     el: "#body",
     data : {
         teamZoom: 0,
-        tourseen: false,
     },
     methods : {
     }
