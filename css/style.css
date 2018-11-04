@@ -64,9 +64,9 @@ hr {
 }
 
 #work,#about, #team, 
-#gallery, #pricing, #contact {
+#gallery, #pricing, #contact, #tourlist {
    padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 .tlinks{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
@@ -598,7 +598,28 @@ contact section
 #contact input[type="submit"]:hover {
   color: #000000;
 }
-#contact .contact-btn { margin-left: 16px; color: #e74c3c; font-size: 16px; }
+#contact .contact-btn { margin-top: 80px; background: #e74c3c; color:#fff; font-size: 22px; border-radius: 16px;}
+
+
+/* ==========================================================================
+tourlist section
+========================================================================== */
+#tourlist {
+}
+#tourlist .row {
+  margin-top: 50px;
+}
+#tourlist h3, #tourlist h2{
+  margin-top: 0;
+  color: #e74c3c;
+}
+#tourlist .list-img img{
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+}
+
+
 /* ==========================================================================
 footer section
 ========================================================================== */
