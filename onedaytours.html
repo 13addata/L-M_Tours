@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>L&M Tours</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/swiper.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/vue.js"></script>
+	<script src="js/smoothscroll.js"></script>
+</head>
+<body>
+<div id="body" v-cloak>
+<!-- navigation section -->
+<section class="navbar navbar-fixed-top top-nav-collapse custom-navbar" role="navigation" v-if="teamZoom===0">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand">L & M Tours</a>
+		</div>
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="index.html" class="smoothScroll">HOME</a></li>
+				<li><a href="#pricing" class="smoothScroll">TOURS</a>
+					<ul class="navbar-fixed-top dropdown">
+						<div class="dropdown-line"></div>
+						<li><a href="onedaytours.html">One day tours</a></li>
+						<li><a href="#">Multi days tours</a></li>
+						<li><a href="#">Cruises</a></li>
+					</ul>
+				</li>
+				<li><a href="#charter" class="smoothScroll">CHARTER</a></li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section id="tourlist">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-5 list-img">
+				<img src="src/img/onedaytours/1117.jpg" alt="">
+				<h2>Philadelphia Museum of Art</h2>
+				<h3>Fabulous Fashion & Perfect Little Ladies</h3>
+			</div>
+			<div class="col-md-7">
+				<h4>$116 <span style="float: right;">Saturday, November 17</span></h4>
+				<p>Philadelphia Museum of Art contains over 240,000 objects including major holdings of European, American and Asian origin. The various classes of artwork include sculpture, paintings, prints, drawings, photographs, armor & decorative arts. We will see two new exhibitions: Fabulous Fashion: From Dior’s New Look to Now. Experience the drama and glamour of some of the most creative feminine fashions ever designed, from romantic ball gowns to audacious contemporary ensembles, and everything in between. Little Ladies: Victorian Fashion Dolls and the Feminine Ideal. These dolls came with an amazing array of dresses, undergarments & meticulously crafted accessories, from gloves & jewelry to roller skates & calling cards. We may use a new mini bus for this trip (subject to change).</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-7">
+				<h4>$59 <span style="float: right;">Saturday, November 17</span></h4>
+				<p>Nestled among the beauty of the Catskill Mountains, Resorts World Catskills Casino Resort in Kiamesha Lake, NY opened on February 8, 2018 and offers an unmatched experience in excitement, entertainment & luxury. The 100,000 square feet of Las Vegas style gaming includes 2,150 cutting-edge slot machines, over 150 live table games and a poker room. From Asian fine dining to a casual bar & grill - Resorts has options to please every appetite. We may use a new mini bus for this trip (subject to change). Please bring valid Photo ID.Price includes transportation and $10 slot play (subject to change).</p>
+			</div>
+			<div class="col-md-5 list-img">
+				<img src="src/img/onedaytours/11172.jpg" alt="">
+				<h2>Resorts World Catskills</h2>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-5 list-img">
+				<img src="src/img/onedaytours/1118.jpg" alt="">
+				<h2>US Coast Guard Band Academy Concert</h2>
+			</div>
+			<div class="col-md-7">
+				<h4>$89 <span style="float: right;">Saturday, November 18</span></h4>
+				<p>The U.S. Coast Guard is one of the five armed forces of the United States and the only military organization within the Department of Homeland Security located in New London, CT. The United States Coast Guard Band is the premier band representing the United States Coast Guard and the Department of Homeland Security. Our day starts with lunch at a local American restaurant. After lunch we will travel to the Academy and enjoy the concert in the afternoon at the Leamy Concert Hall. Please bring a valid government-issued photo ID. We may use a new mini bus for this trip (subject to change).Price includes transportation, lunch and concert.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-7">
+				<h4>$109 <span style="float: right;">Saturday, November 17</span></h4>
+				<p>The Wolf Conservation Center’s mission is to promote wolf conservation by teaching about wolves, their relationship to the environment, and the human role in protecting their future. Our visit begins with a brief educational power point presentation in the cozy cabin classroom. The second portion of the program occurs outdoors by the wolf enclosures.  Our guide answers guests’ questions as we observe wolf behaviour and we howl with the wolves.  We will see the ambassador wolves and Mexican wolves. The center started in 1996 is located in South Salem, NY. Then we will visit the Keeler Tavern Museum, listed on the National Register of Historic Places since 1982, embodies the life of the community from the early 18th century through the mid-20th century. The Keeler Tavern has been a farmhouse, tavern, stagecoach stop, post office, hotel, home of noted architect Cass Gilbert and, since 1966, a museum. We may use a new mini bus for this trip (subject to change).Price includes transportation, lunch and admissions.</p>
+			</div>
+			<div class="col-md-5 list-img">
+				<img src="src/img/onedaytours/11182.jpg" alt="">
+				<h2>Wolf Conservation Center & More</h2>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- footer section -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-4">
+					<h3><i class="fa fa-home" ></i> ADDRESS</h3>
+					<p>6812 3rd Avenue, Brooklyn, NY 11220</p>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<h3><i class="fa fa-envelope" ></i> EMAIL</h3>
+					<p>info@LMTOURS.net</p>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<h3><i class="fa fa-phone" ></i> PHONE</h3>
+					<p>718-238-2284</p>
+			</div>
+		</div>
+		<p>Copyright © 2018. L&M Tours Inc.All rights Reserved.</p>
+	</div>
+	<div class="imgcover" @click="teamZoom=0" v-if="teamZoom!=0"></div>
+</footer>
+
+</div>
+<script src="js/list.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript">
+
+	window.onload = function() {
+		var swiper = new Swiper('.swiper-container',{
+			autoplay: false,
+			speed: 1000,
+			autoplayDisableOnInteraction: false,
+			loop: true,
+			centeredSlides: true,
+			slidesPerView: 2,
+			pagination: '.swiper-pagination',
+			paginationClickable: true,
+			prevButton: '.swiper-button-prev',
+			nextButton: '.swiper-button-next',
+			onInit: function(swiper) {
+				swiper.slides[2].className = "swiper-slide swiper-slide-active";
+			},
+			breakpoints: {
+				668: {
+					slidesPerView: 1,
+				}
+			}
+		});
+	}
+</script>
+ <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+</body>
+</html>
+
